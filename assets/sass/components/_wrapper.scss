@@ -137,3 +137,27 @@
 			}
 		}
 	}
+
+/* Ajout d'images d'arrière-plan avec opacité pour les sections dans la classe .features */
+.features section {
+    position: relative;
+    padding: 2em;
+    background-size: cover;
+    background-position: center;
+    color: white; /* Pour assurer que le texte reste lisible */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.features section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Ajuste l'opacité à ton goût */
+    z-index: -1; /* S'assure que l'image reste derrière le texte */
+}
